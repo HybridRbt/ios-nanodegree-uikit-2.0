@@ -27,8 +27,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       
         // TODO: Implement this method to get the correct row count
-        let placeholderCount = 2
-        return placeholderCount
+//        let placeholderCount = 2
+//        return placeholderCount
+        return self.favoriteThings.count
     }
 
     
