@@ -75,6 +75,7 @@ class RockPaperScissorsViewController: UIViewController {
         //Notice that this code works for both Scissors and Paper
         if segue.identifier == "showHistory" {
             let controller = segue.destinationViewController as! HistoryViewController
+            controller.history = self.history
         } else {
             let controller = segue.destinationViewController as! ResultViewController
             controller.match = self.match
