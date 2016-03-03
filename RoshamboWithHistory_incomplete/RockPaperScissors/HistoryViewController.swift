@@ -20,10 +20,25 @@ class HistoryViewController: UIViewController, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("matchDetail")! as UITableViewCell
-        cell.textLabel?.text = self.history[indexPath.row].
         
-        if let cell.detailTextLabel {
-            
+        var cellText = ""
+        let user = self.history[indexPath.row].p1
+        let pc = self.history[indexPath.row].p2
+        
+        if user.defeats(pc) {
+            cellText = "WIN!"
+            if let cellDetail = cell.detailTextLabel {
+                cellDetail.text = "Your move: " + "\(user.description)" + ", their move: " + "\(pc.description)"
+            }
+        } else if pc.defeats(user) {
+            cellText = "LOSE!"
+            if let cellDetail = cell.detailTextLabel {
+                cellDetail.text = "Your move: " + "\(user.description)" + ", their move: " + "\(pc.description)"
+            }
         }
+        
+        cell.textLabel?.text = cellText
+        
+        return cell
     }
 }
