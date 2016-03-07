@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import UIKit
+
+class VillainDetailViewController : UIViewController {
+    @IBOutlet weak var villainImage: UIImageView!
+    
+    @IBOutlet weak var villainLabel: UILabel!
+    
+    var villain : Villain
+    
+    override func viewWillAppear(animated: Bool) {
+        self.villainImage.image = UIImage(named: self.villain.imageName)
+        self.villainLabel.text = self.villain.name
+    }
+}
