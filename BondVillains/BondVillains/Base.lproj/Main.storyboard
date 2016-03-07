@@ -118,8 +118,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="villianImage" destination="qpc-uf-fpR" id="46D-7w-3Ej"/>
-                        <outlet property="villianLabel" destination="sgD-NS-HXQ" id="SXk-ho-twM"/>
+                        <outlet property="villainImage" destination="qpc-uf-fpR" id="cpl-AG-NGc"/>
+                        <outlet property="villainLabel" destination="sgD-NS-HXQ" id="uT5-l9-Aci"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOO-Uc-xS7" userLabel="First Responder" sceneMemberID="firstResponder"/>

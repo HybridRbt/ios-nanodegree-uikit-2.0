@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 class VillainDetailViewController : UIViewController {
-    @IBOutlet weak var villainImage: UIImageView!
     
     @IBOutlet weak var villainLabel: UILabel!
+    @IBOutlet weak var villainImage: UIImageView!
     
     var villain : Villain
     
