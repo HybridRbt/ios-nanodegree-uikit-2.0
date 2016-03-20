@@ -36,7 +36,19 @@ class StoryNodeViewController: UIViewController, UITableViewDelegate, UITableVie
         // MARK: - Table - Place Holder Implementation
     
         func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-            //TODO: Implement to push the next story node.
+            // Implement to push the next story node. Use the same method used in RootTableViewController
+            
+            // Get the next storyNode at the selected index
+            let nextNode = storyNode.storyNodeForIndex(indexPath.row)
+            
+            // Get a StoryNodeController from the Storyboard
+            let nextStoryNodeController = self.storyboard!.instantiateViewControllerWithIdentifier("StoryNodeViewController")as! StoryNodeViewController
+            
+            // Set the story node to be the next node
+            nextStoryNodeController.storyNode = nextNode
+            
+            // Push the new controller onto the stack
+            self.navigationController!.pushViewController(nextStoryNodeController, animated: true)
     
     }
     
