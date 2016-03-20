@@ -51,7 +51,8 @@ class StoryNodeViewController: UIViewController, UITableViewDelegate, UITableVie
             
             let cell = tableView.dequeueReusableCellWithIdentifier("Cell")! 
     
-            cell.textLabel!.text = "Place holder prompt"
+            let prompt = storyNode.promptForIndex(indexPath.row)
+            cell.textLabel!.text = prompt
             
             return cell
         }
