@@ -42,8 +42,8 @@ class StoryNodeViewController: UIViewController, UITableViewDelegate, UITableVie
     
     
         func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            // TODO: Return the number of prompts in the storyNode (The 2 is just a place holder)
-            return 2
+            // Return the number of prompts in the storyNode
+            return storyNode.promptCount()
         }
     
         func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
