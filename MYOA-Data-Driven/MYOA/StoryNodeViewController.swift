@@ -47,7 +47,7 @@ class StoryNodeViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     
         func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            //TODO: Dequeue a cell and populate it with text from the correct prompt.
+            // Dequeue a cell and populate it with text from the correct prompt.
             
             let cell = tableView.dequeueReusableCellWithIdentifier("Cell")! 
     
